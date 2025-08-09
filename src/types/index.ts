@@ -9,6 +9,8 @@ export type Product = {
   featured?: boolean;
   ingredients?: string[];
   sizes?: string[];
+  allergens?: string[];
+  inStock?: boolean;
 };
 
 export interface ProductSize {
