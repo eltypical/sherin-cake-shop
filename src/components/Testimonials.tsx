@@ -16,7 +16,7 @@ const Testimonials = () => {
       id: '2',
       name: 'Michael Chen',
       rating: 5,
-      comment: 'Amazing cupcakes for my daughter\'s birthday party. The kids absolutely loved them!',
+      comment: 'Amazing cupcakes for my daughter&apos;s birthday party. The kids absolutely loved them!',
       location: 'Brooklyn, NY'
     },
     {
@@ -57,7 +57,7 @@ const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers 
+            Don&apos;t just take our word for it - hear from our satisfied customers 
             who have made their celebrations sweeter with our cakes.
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ const Testimonials = () => {
                 {renderStars(testimonial.rating)}
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "{testimonial.comment}"
+                &quot;{testimonial.comment}&quot;
               </p>
               <div>
                 <h4 className="font-semibold text-dark">{testimonial.name}</h4>
@@ -85,6 +85,9 @@ const Testimonials = () => {
             </motion.div>
           ))}
         </div>
+        <p>
+          Our customers love Sherin&apos;s Cake Shop! Here&apos;s what they have to say: &quot;Amazing cakes!&quot; and &quot;Excellent service!&quot;
+        </p>
       </div>
     </section>
   )

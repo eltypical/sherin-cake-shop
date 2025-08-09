@@ -1,20 +1,15 @@
-export interface Product {
-  id: string
-  name: string
-  description: string
-  price: number
-  image: string
-  images?: string[]
-  category: string
-  ingredients?: string[]
-  allergens?: string[]
-  sizes?: ProductSize[]
-  flavors?: string[]
-  rating?: number
-  reviews?: Review[]
-  inStock: boolean
-  featured?: boolean
-}
+export type Product = {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+  description: string;
+  rating?: number;
+  featured?: boolean;
+  ingredients?: string[];
+  sizes?: string[];
+};
 
 export interface ProductSize {
   size: string

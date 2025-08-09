@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Star, Heart, ShoppingCart, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { getFeaturedProducts, formatPrice } from '../lib/data'
 import { useCart } from '../lib/contexts/CartContext'
+import { Product } from '../types'
 
 const FeaturedProducts = () => {
   const featuredProducts = getFeaturedProducts()
@@ -29,7 +30,7 @@ const FeaturedProducts = () => {
     )
   }
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: Product) => {
     addItem(product, 1)
     // Could add a toast notification here
   }
@@ -66,7 +67,7 @@ const FeaturedProducts = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover our most loved cakes and desserts, carefully selected based on 
-            customer reviews and our pastry chef's recommendations.
+            customer reviews and our pastry chef&apos;s recommendations.
           </p>
         </motion.div>
 
@@ -98,7 +99,7 @@ const FeaturedProducts = () => {
               animate={{ x: `${-currentIndex * 100}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              {featuredProducts.map((product, index) => (
+              {featuredProducts.map((product) => (
                 <div key={product.id} className="w-full flex-shrink-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px]">
                     {/* Product Image */}

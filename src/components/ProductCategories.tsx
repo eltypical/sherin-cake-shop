@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { categories } from '../lib/data'
 
@@ -59,7 +58,7 @@ const ProductCategories = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <motion.div
               key={category.id}
               variants={cardVariants}

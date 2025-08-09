@@ -20,7 +20,7 @@ const AboutSection = () => {
             About Sherin Cake Shop
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Founded with passion and dedication to the art of baking, we create memorable 
+            Founded with passion and dedication to the art of baking, we create memorable
             experiences through exceptional cakes and desserts.
           </p>
         </motion.div>
@@ -37,14 +37,17 @@ const AboutSection = () => {
               Crafting Sweet Memories Since 2008
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              What started as a small home bakery has grown into a beloved cake shop 
-              that serves our community with the finest handcrafted desserts. Every 
-              cake tells a story, and we're honored to be part of your special moments.
+              What started as a small home bakery has grown into a beloved cake shop
+              that serves our community with the finest handcrafted desserts. Every
+              cake tells a story, and we&apos;re honored to be part of your special moments.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our commitment to quality means using only the finest ingredients, 
-              traditional techniques, and innovative designs to create cakes that 
+              Our commitment to quality means using only the finest ingredients,
+              traditional techniques, and innovative designs to create cakes that
               not only look beautiful but taste extraordinary.
+            </p>
+            <p>
+              Welcome to Sherin&apos;s Cake Shop, where every cake is a masterpiece.
             </p>
           </motion.div>
 

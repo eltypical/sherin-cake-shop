@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react'
-import Image from 'next/image'
 import { useCart } from '../lib/contexts/CartContext'
 import { formatPrice } from '../lib/data'
 

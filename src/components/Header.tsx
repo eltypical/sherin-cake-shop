@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ShoppingCart, Menu, X, Search, Heart, Phone, MapPin } from 'lucide-react'
+import { ShoppingCart, Menu, Search, Heart, Phone, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import { useCart } from '../lib/contexts/CartContext'
 import { useFavorites } from '../lib/contexts/FavoritesContext'

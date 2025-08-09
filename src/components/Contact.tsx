@@ -41,7 +41,7 @@ const Contact = () => {
             Contact Us
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Ready to order your perfect cake? We'd love to hear from you and help 
+            Ready to order your perfect cake? We&apos;d love to hear from you and help 
             make your celebration extra special.
           </p>
         </motion.div>
@@ -228,6 +228,10 @@ const Contact = () => {
                 <span>Send Message</span>
               </motion.button>
             </form>
+
+            <p>
+              Feel free to reach out to Sherin&apos;s Cake Shop for any inquiries.
+            </p>
           </motion.div>
         </div>
       </div>

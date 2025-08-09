@@ -2,10 +2,12 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, ShoppingCart, Star, Filter, Search, Grid, List } from 'lucide-react';
+import { Heart, ShoppingCart, Star, Search, Grid, List } from 'lucide-react';
 import { products, categories, getProductsByCategory } from '../../lib/data';
 import { useCart } from '../../lib/contexts/CartContext';
 import { useFavorites } from '../../lib/contexts/FavoritesContext';
+import Image from 'next/image';
+import { Product } from '../../types';
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -54,7 +56,7 @@ const ProductsPage = () => {
     return filtered;
   }, [selectedCategory, searchTerm, sortBy, priceRange]);
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: Product) => {
     addToCart({
       id: product.id,
       name: product.name,
@@ -64,7 +66,7 @@ const ProductsPage = () => {
     });
   };
 
-  const handleToggleFavorite = (product: any) => {
+  const handleToggleFavorite = (product: Product) => {
     if (isFavorite(product.id)) {
       removeFavorite(product.id);
     } else {
@@ -228,9 +230,11 @@ const ProductsPage = () => {
             >
               {/* Product Image */}
               <div className={viewMode === 'grid' ? 'relative h-48' : 'relative w-48 h-48 flex-shrink-0'}>
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  width={500}
+                  height={500}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

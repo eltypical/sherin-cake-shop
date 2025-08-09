@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Search } from 'lucide-react'
 import { searchProducts, formatPrice } from '../lib/data'
+import { Product } from '../types'
 
 interface SearchModalProps {
   isOpen: boolean
@@ -12,7 +13,7 @@ interface SearchModalProps {
 
 const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState<any[]>([])
+  const [results, setResults] = useState<Product[]>([])
 
   const handleSearch = (searchQuery: string) => {
     setQuery(searchQuery)
@@ -78,9 +79,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
             <div className="max-h-96 overflow-y-auto p-6">
               {query && results.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-gray-500">No products found for "{query}"</p>
+                  <p className="text-gray-500">No products found for &quot;{query}&quot;</p>
                   <p className="text-sm text-gray-400 mt-2">
-                    Try searching for "chocolate cake" or "cupcakes"
+                    Try searching for &quot;chocolate cake&quot; or &quot;cupcakes&quot;
                   </p>
                 </div>
               ) : results.length > 0 ? (
@@ -128,6 +129,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                   </h3>
                   <p className="text-gray-400">
                     Find your perfect cake, cupcake, or sweet treat
+                  </p>
+                  <p>
+                    Search for your favorite cakes: &quot;Chocolate&quot;, &quot;Vanilla&quot;, &quot;Strawberry&quot;.
                   </p>
                 </div>
               )}
