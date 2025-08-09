@@ -1,9 +1,11 @@
+import { getImageUrl } from './imageUtils';
+
 export const products = [
   {
     id: "1",
     name: "Chocolate Cake",
     price: 20,
-    image: "https://source.unsplash.com/featured/?chocolate-cake",
+    image: getImageUrl('chocolate-cake'),
     category: "Cakes",
     description: "A rich and moist chocolate cake.",
     rating: 4.8,
@@ -15,11 +17,11 @@ export const products = [
     id: "2",
     name: "Vanilla Cake",
     price: 18,
-    image: "https://source.unsplash.com/featured/?vanilla-cake",
+    image: getImageUrl('vanilla-cake'),
     category: "Cakes",
     description: "A classic vanilla cake with creamy frosting.",
     rating: 4.5,
-    featured: false,
+    featured: true,
     ingredients: ["Vanilla Extract", "Flour", "Sugar", "Eggs"],
     sizes: ["Small", "Medium", "Large"],
   },
